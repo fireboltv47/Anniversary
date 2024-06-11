@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Puzzle - Our First Meeting</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFF3F0;
+            color: #343a40;
+            text-align: center;
+            padding: 2em;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #e63946;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 1em;
+        }
+        .puzzle {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: calc(100% - 22px);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e63946;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #d62828;
+        }
+        .hint {
+            margin-top: 10px;
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our First Meeting</h1>
+        <p>Our journey began in the atrium of DMMC Nagpur. It was a moment I will never forget – seeing you for the first time amidst the hustle and bustle. Our paths crossed again in the auditorium of DMMC Nagpur, where we finally came face to face.</p>
+        <img src="atrium.jpg" alt="Atrium of DMMC Nagpur">
+        <img src="auditorium.jpg" alt="Auditorium of DMMC Nagpur">
+        <div class="puzzle">
+            <p>Where did I meet you and your mom next while I was with my dad?</p>
+            <input type="text" id="answer" placeholder="Enter your answer here">
+            <button onclick="checkAnswer()">Submit</button>
+            <div id="result"></div>
+            <p class="hint">Hint: Apron shopping</p>
+        </div>
+    </div>
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value.toLowerCase();
+            var result = document.getElementById("result");
+            if (answer === "milton dharampeth nagpur") {
+                result.textContent = "Correct! Redirecting...";
+                result.style.color = "green";
+                setTimeout(function() {
+                    window.location.href = "congratulations.html";
+                }, 2000); // Redirect after 2 seconds
+            } else {
+                result.textContent = "Incorrect. Try again.";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
