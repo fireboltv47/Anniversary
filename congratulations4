@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations! - Our Anniversary Scavenger Hunt</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('congratulationsimage4.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 2em;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5); /* Translucent black background */
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #e63946;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 2em;
+            padding: 0.8em 1.5em;
+            color: #ffffff;
+            background-color: #e63946;
+            text-decoration: none;
+            border-radius: 20px; /* Rounded corners */
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none; /* Remove default border */
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #d62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Congratulations!!!</h1>
+        <p>Coding takes an awfully long time lol.</p>
+        <p>Open Envelope 5, I hope this concert ticket which I had while I was there texting you, while being a lackluster gift, is personally meaningful to you.</p>
+        <p>Proceed to move forward.</p>
+        <a href="puzzle5.html" class="btn">Proceed to Puzzle 5</a>
+    </div>
+</body>
+</html>
