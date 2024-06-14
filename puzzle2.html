@@ -8,10 +8,13 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f8d7da; /* Slightly baby pink background */
+            background-image: url('congratulationsimage1.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
             color: #343a40;
             text-align: center;
             padding: 2em;
+            margin: 0; /* Remove default margin */
         }
         .container {
             max-width: 600px;
@@ -57,6 +60,16 @@
             background-color: #d62828;
         }
     </style>
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value.trim().toLowerCase();
+            if (answer === 'apples') {
+                window.location.href = 'congratulations2.html';
+            } else {
+                alert('Incorrect answer, try again!');
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -75,15 +88,5 @@
         </div>
         <a href="javascript:void(0);" class="btn" onclick="checkAnswer()">Submit</a>
     </div>
-    <script>
-        function checkAnswer() {
-            const answer = document.getElementById('answer').value.trim().toLowerCase();
-            if (answer === 'apples') {
-                window.location.href = 'congratulations2.html';
-            } else {
-                alert('Incorrect answer, try again!');
-            }
-        }
-    </script>
 </body>
 </html>
