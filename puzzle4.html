@@ -8,13 +8,10 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-image: url('congratulationsimage3.jpg'); /* Updated background image */
-            background-size: cover;
-            background-position: center;
+            background-color: #f6c1c7; /* Adjusted pink color */
             color: #343a40;
             text-align: center;
             padding: 2em;
-            margin: 0; /* Remove default margin */
         }
         .container {
             max-width: 600px;
@@ -71,7 +68,7 @@
             <li>If unscrambling becomes too difficult, I've written the order of the squares in small numbers on the bottom behind all of them.</li>
         </ol>
         <p>Hint: I'm Combining...is that a word?... our AFMC and Freshers memories here.</p>
-        <form action="congratulations4.html" method="get" onsubmit="return validateAnswer()">
+        <form id="answerForm" action="congratulations4.html" method="get" onsubmit="return validateAnswer(event)">
             <input type="text" class="textbox" id="answer" name="answer" placeholder="Enter your answer" required>
             <br>
             <button type="submit" class="btn">Submit</button> <!-- Changed button text to "Submit" -->
@@ -79,9 +76,12 @@
     </div>
 
     <script>
-        function validateAnswer() {
+        function validateAnswer(event) {
+            event.preventDefault(); // Prevent default form submission
+
             var answer = document.getElementById('answer').value.trim().toLowerCase();
             if (answer === 'concert') {
+                window.location.href = 'congratulations4.html'; // Redirect to congratulations4.html
                 return true; // Proceed to congratulations4.html
             } else {
                 alert('Oops! That\'s not the correct answer. Try again.');
