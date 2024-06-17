@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 18 - Promises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('congratulationsimage17.jpg'); /* Background image */
+            background-size: cover; /* Ensure the background image covers the entire screen */
+            background-repeat: no-repeat; /* Ensure the background image does not repeat */
+            background-position: center; /* Center the background image */
+            color: #343a40;
+            text-align: center;
+            padding: 2em;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #e63946;
+        }
+        p {
+            font-size: 1.1em;
+            text-align: left;
+            margin-bottom: 1.5em;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 2em;
+            padding: 0.8em 1.5em;
+            color: #ffffff;
+            background-color: #e63946;
+            text-decoration: none;
+            border-radius: 20px; /* Rounded corners */
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none; /* Remove default border */
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #d62828;
+        }
+        .textbox {
+            margin-top: 2em;
+            padding: 0.5em;
+            width: 80%;
+            max-width: 400px;
+            font-size: 1em;
+            border: 2px solid #e63946;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .hint {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 1em;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Puzzle 18 - Promises</h1>
+        <p>And we finally are at promises, The hundreds of promises that we have made to each other. I promise to always fulfill each one. Be it to never go to bed angry or never try to win and always try to do our best to make this work to everything we promised we will do together.</p>
+        <p>Here are your instructions:</p>
+        <ol>
+            <li>Look at your puzzle card</li>
+            <li>It's morse code, finish the puzzle :D</li>
+        </ol>
+        <p class="hint">Hint: It is just one word and all the letters are small</p>
+        <form id="answerForm" action="congratulations18.html" method="get" onsubmit="return validateAnswer(event)">
+            <input type="text" class="textbox" id="answer" name="answer" placeholder="Enter your answer" required>
+            <br>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function validateAnswer(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var answer = document.getElementById('answer').value.trim().toLowerCase();
+            if (answer === 'forever') {
+                window.location.href = 'congratulations18.html'; // Redirect to congratulations18.html
+                return true; // Proceed to congratulations18.html
+            } else {
+                alert('Oops! That\'s not the correct answer. Try again.');
+                return false; // Stay on puzzle18.html
+            }
+        }
+    </script>
+
+</body>
+</html>
