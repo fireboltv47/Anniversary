@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4c2c2;
+            color: #343a40;
+            text-align: center;
+            padding: 2em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #e63946;
+        }
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .caption {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 0.5em;
+            border-radius: 4px;
+            font-size: 1.2em;
+        }
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .navigation a {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 0.5em;
+            text-decoration: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 2em;
+            padding: 0.8em 1.5em;
+            color: #ffffff;
+            background-color: #e63946;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #d62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recap</h1>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="congratulationsimage1.jpg" alt="First Meeting">
+                    <div class="caption">First Meeting</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage2.jpg" alt="First Year">
+                    <div class="caption">First Year</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage3.jpg" alt="Why you moved close">
+                    <div class="caption">Why you moved close</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage4.jpg" alt="Pseudo dating">
+                    <div class="caption">Pseudo dating</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage5.jpg" alt="Asking you Out">
+                    <div class="caption">Asking you Out</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage6.jpg" alt="First Date">
+                    <div class="caption">First Date</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage7.jpg" alt="First Gift">
+                    <div class="caption">First Gift</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage8.jpg" alt="Flowers">
+                    <div class="caption">Flowers</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage9.jpg" alt="Place we always run off to">
+                    <div class="caption">Place we always run off to</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage10.jpg" alt="First Kiss">
+                    <div class="caption">First Kiss</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage11.jpg" alt="Opposites">
+                    <div class="caption">Opposites</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage12.jpg" alt="Dates">
+                    <div class="caption">Dates</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage13.jpg" alt="Exam Trauma">
+                    <div class="caption">Exam Trauma</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage14.jpg" alt="Going out in a group">
+                    <div class="caption">Going out in a group</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage15.jpg" alt="Holidays and Festivals">
+                    <div class="caption">Holidays and Festivals</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage16.jpg" alt="Gifts">
+                    <div class="caption">Gifts</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage17.jpg" alt="Terrible pictures">
+                    <div class="caption">Terrible pictures</div>
+                </div>
+                <div class="slide">
+                    <img src="congratulationsimage18.jpg" alt="Promises">
+                    <div class="caption">Promises</div>
+                </div>
+            </div>
+            <div class="navigation">
+                <a href="#" class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                <a href="#" class="next" onclick="moveSlide(1)">&#10095;</a>
+            </div>
+        </div>
+        <a href="endpage.html" class="btn">Finish the Hunt</a>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function moveSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.querySelectorAll('.slide');
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slides[slideIndex].style.display = 'block';
+        }
+    </script>
+</body>
+</html>
